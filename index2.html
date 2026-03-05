@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vedic Site</title>
+  <link rel="shortcut icon" href="./src/fevivon.jpg" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Yatra+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="output.css">
+
+  <style>
+    body{
+      font-family: "Cinzel", serif;
+    }
+
+    h1,h2,h3,h4{
+      font-family: "Yatra One", cursive;
+      letter-spacing: 1px;
+    }
+    .navbar {
+      background-color: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(12px);
+    }
+
+    .hero-gradient {
+      background:
+        linear-gradient(
+          to right,
+          rgba(11,31,58,0.95),
+          rgba(30,58,138,0.85),
+          rgba(14,165,233,0.6)
+        ),
+        url('./src/image.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .section-two-gradient {
+      background:
+        linear-gradient(
+          to right,
+          rgba(186,230,253,0.9),
+          rgba(125,211,252,0.8),
+          rgba(56,189,248,0.7)
+        ),
+        url('https://images.unsplash.com/photo-1506126613408-eca07ce68773');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .contact-bg{
+      background:
+      linear-gradient(to right, rgba(0,0,0,0.45), rgba(0,0,0,0.25)),
+      url('./src/contactPage.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="text-white font-sans">
+
+  <!-- Navbar -->
+  <header class="navbar fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-10 lg:px-20 py-4 md:py-5">
+    <div class="font-bold tracking-wide text-lg text-black">
+      AMAL TECH
+    </div>
+
+    <nav class="hidden md:flex">
+      <ul class="flex gap-6 md:gap-10 text-black">
+        <li><a href="#yoga" class="hover:text-white transition px-2 py-1 rounded">Yoga</a></li>
+        <li><a href="#Meditation" class="hover:text-white transition px-2 py-1 rounded">Meditation</a></li>
+        <li><a href="#culture" class="hover:text-white transition px-2 py-1 rounded">Culture</a></li>
+        <li><a href="#blog" class="hover:text-white transition px-2 py-1 rounded">Blog</a></li>
+      </ul>
+    </nav>
+
+    <!-- Mobile menu button -->
+    <div class="md:hidden">
+      <button id="mobile-menu-btn" class="text-black text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
+    </div>
+
+    <!-- Desktop CTA -->
+    <button class="hidden md:block bg-[#ff8c42] hover:opacity-90 transition px-5 py-2 rounded-lg font-medium shadow-lg shadow-orange-500/40">
+      Join Now
+    </button>
+  </header>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu" class="fixed top-16 left-0 w-full bg-white/95 backdrop-blur-md z-40 hidden md:hidden px-4 py-6">
+    <ul class="flex flex-col gap-4 text-black text-lg">
+      <li><a href="#yoga" class="hover:text-[#ff8c42] transition block py-2">Yoga</a></li>
+      <li><a href="#Meditation" class="hover:text-[#ff8c42] transition block py-2">Meditation</a></li>
+      <li><a href="#culture" class="hover:text-[#ff8c42] transition block py-2">Culture</a></li>
+      <li><a href="#blog" class="hover:text-[#ff8c42] transition block py-2">Blog</a></li>
+    </ul>
+    <div class="mt-6 pt-4 border-t">
+      <button class="w-full bg-[#ff8c42] hover:opacity-90 transition py-3 rounded-lg font-medium text-white">
+        Join Now
+      </button>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center px-4 md:px-10 lg:px-20 pt-16 md:pt-28 hero-gradient" id="yoga">
+    <div class="w-full max-w-xl mx-auto text-center lg:text-left lg:mx-0">
+      <span class="bg-[#ff8c42]/20 text-[#ff8c42] px-3 py-1 rounded-full text-xs tracking-widest uppercase inline-block">
+        Ancient Wisdom for Modern Living
+      </span>
+
+      <h1 class="text-3xl md:text-5xl lg:text-6xl mt-6 mb-6 leading-tight font-bold drop-shadow-lg">
+        Find Your Inner <br>
+        <span class="text-[#ff8c42]">Sanctuary</span>
+      </h1>
+
+      <p class="text-slate-300 mb-8 leading-relaxed text-sm md:text-base lg:text-lg px-4 lg:px-0">
+        Experience transformative Yoga and Meditation practices rooted in thousands of years of authentic Indian tradition.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+        <button class="bg-[#ff8c42] hover:opacity-90 transition px-6 md:px-7 py-3 rounded-xl font-medium shadow-[0_0_30px_rgba(255,140,66,0.5)] w-full sm:w-auto">
+          Start Your Journey
+        </button>
+        <button class="border border-white/30 hover:border-white transition px-6 md:px-7 py-3 rounded-xl backdrop-blur-sm w-full sm:w-auto">
+          Explore Programs
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2 -->
+  <section class="min-h-screen flex items-center px-4 md:px-10 lg:px-20 pt-16 md:pt-28 section-two-gradient" id="Meditation">
+    <div class="w-full">
+      <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 lg:mb-20">
+        <p class="text-amber-600 uppercase tracking-widest text-sm mb-4 font-medium">
+          Our Offerings
+        </p>
+        <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-slate-800 mb-6 px-4 md:px-0">
+          Holistic Paths to Balance
+        </h2>
+        <p class="text-slate-600 leading-relaxed text-base md:text-lg px-4 md:px-0">
+          Deeply rooted in Vedic philosophy, our services are designed to nurture your physical, mental, and spiritual well-being.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 px-4 md:px-0">
+        <div class="px-4 md:px-6 text-center">
+          <div class="text-orange-600 text-3xl md:text-4xl mb-6 mx-auto w-16 h-16 flex items-center justify-center mx-auto">🧘</div>
+          <h3 class="text-xl md:text-xl font-semibold text-slate-800 mb-3">
+            Authentic Yoga
+          </h3>
+          <p class="text-slate-600 mb-4 text-sm md:text-base leading-relaxed">
+            Master traditional Hatha and Vinyasa asanas to build strength, flexibility, and a calm mind.
+          </p>
+          <a href="#" class="text-orange-600 font-medium hover:text-orange-700 transition text-sm md:text-base">
+            Learn More →
+          </a>
+        </div>
+
+        <div class="px-4 md:px-6 text-center">
+          <div class="mb-6">
+            <img src="./src/om.png" alt="Om Icon" class="h-12 w-12 md:h-16 md:w-16 mx-auto">
+          </div>
+          <h3 class="text-xl md:text-xl font-semibold text-slate-800 mb-3">
+            Deep Meditation
+          </h3>
+          <p class="text-slate-600 mb-4 text-sm md:text-base leading-relaxed">
+            Discover inner stillness through guided mindfulness and ancient Dhyana techniques.
+          </p>
+          <a href="#" class="text-orange-600 font-medium hover:text-orange-700 transition text-sm md:text-base">
+            Explore Stillness →
+          </a>
+        </div>
+
+        <div class="px-4 md:px-6 text-center">
+          <div class="text-orange-600 text-3xl md:text-4xl mb-6 mx-auto w-16 h-16 flex items-center justify-center mx-auto">📖</div>
+          <h3 class="text-xl md:text-xl font-semibold text-slate-800 mb-3">
+            Vedic Wisdom
+          </h3>
+          <p class="text-slate-600 mb-4 text-sm md:text-base leading-relaxed">
+            Educational workshops on Ayurveda, philosophy, and applying ancient ethics to modern life.
+          </p>
+          <a href="#" class="text-orange-600 font-medium hover:text-orange-700 transition text-sm md:text-base">
+            Learn More →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3 -->
+  <section class="min-h-screen px-4 md:px-8 lg:px-16 py-16 md:py-16 bg-[linear-gradient(rgba(205,255,255,0.85),rgba(255,255,255,0.85)),url('./sectionBG.jpg')] bg-cover bg-center" id="culture">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-black uppercase tracking-widest text-sm mb-4 font-medium mt-8">
+        INSIGHT
+      </p>
+
+      <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center mb-12 md:mb-16 gap-4 lg:gap-0">
+        <h2 class="text-xl md:text-2xl lg:text-2xl text-black leading-tight">
+          FORM THE VEDAMIND JOURNEY
+        </h2>
+        <button class="border border-[#ff8c42] text-[#ff8c42] px-4 py-2 rounded-lg hover:bg-[#ff8c42] hover:text-white text-sm md:text-base w-full lg:w-auto">
+          View all posts
+        </button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden p-4 md:p-5 border border-red-50">
+          <img src="./src/yoga.jpg" class="w-full h-40 md:h-48 object-cover rounded-2xl hover:scale-110 transition duration-300 cursor-pointer">
+          <p class="text-lg md:text-xl text-gray-400 mt-3">
+            Yoga Practice
+          </p>
+          <h3 class="text-lg md:text-xl font-semibold mt-2 text-amber-600 leading-tight">
+            Modern Benefits of Ancient Yoga
+          </h3>
+          <p class="text-gray-500 mt-3 text-sm md:text-base leading-relaxed">
+            Discover how 5,000-year-old poses reduce modern stress.
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden p-4 md:p-5 border border-red-50">
+          <img src="./src/mindfullness.jpg" class="w-full h-40 md:h-48 object-cover rounded-2xl hover:scale-110 transition duration-300 cursor-pointer">
+          <p class="text-lg md:text-xl text-gray-400 mt-3">Mind Fullness</p>
+          <h3 class="text-lg md:text-xl font-semibold mt-2 text-amber-600 leading-tight">
+            Mindfulness in Daily Life
+          </h3>
+          <p class="text-gray-500 mt-3 text-sm md:text-base leading-relaxed">
+            Mindfulness means being fully aware of the present moment.
+            It helps you focus on your thoughts, feelings, and surroundings without distraction.
+          </p>
+        </div>
+        
+        <!-- Card 3 -->
+        <div class="bg-white rounded-xl shadow-sm overflow-hidden p-4 md:p-5 border border-red-50">
+          <img src="./src/ayurveda.jpg" class="w-full h-40 md:h-48 object-cover rounded-2xl hover:scale-110 transition duration-300 cursor-pointer">
+          <p class="text-lg md:text-xl text-gray-400 mt-3">Ayurveda</p>
+          <h3 class="text-lg md:text-xl font-semibold mt-2 text-amber-600 leading-tight">
+            Ayurvedic Nutrition Basics
+          </h3>
+          <p class="text-gray-500 mt-3 text-sm md:text-base leading-relaxed">
+            Ayurveda is an ancient system of natural healing from India.
+            It focuses on balance in body, mind, and lifestyle. 🌿
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4 -->
+  <section class="h-screen px-4 md:px-10 lg:px-20 py-16 md:py-24 bg-[linear-gradient(rgba(186,230,253,0.9),rgba(125,211,252,0.9)),url('./secfourBG.png')] bg-cover bg-center">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16 items-center">
+      <div class="relative order-2 lg:order-1">
+        <img src="./src/girl.jpg" class="w-full rounded-xl shadow-xl h-auto max-h-[500px] object-cover">
+        <div class="absolute bottom-[-20px] md:bottom-[-30px] right-[-20px] md:right-[-30px] bg-[#ff8c42] text-white p-4 md:p-6 rounded-xl shadow-lg w-32 md:w-auto">
+          <h3 class="text-2xl md:text-3xl font-bold">5000+</h3>
+          <p class="text-xs md:text-sm tracking-wider">YEARS OF HERITAGE</p>
+        </div>
+      </div>
+      <div class="order-1 lg:order-2 max-w-xl mx-auto lg:mx-0">
+        <p class="text-[#ff8c42] uppercase tracking-[0.2em] text-sm font-semibold mb-4">
+          Rooted in Heritage
+        </p>
+        <h2 class="text-3xl md:text-4xl lg:text-4xl font-bold text-slate-900 mb-6 leading-tight">
+          Authenticity in Every Breath
+        </h2>
+        <p class="text-slate-600 leading-relaxed mb-5 text-base md:text-lg">
+          VedaMind is more than a wellness platform — it is a gateway to 
+          <span class="font-medium text-slate-800">Bharat's timeless wisdom</span>.
+        </p>
+        <p class="text-slate-600 leading-relaxed mb-8 md:mb-10 text-base md:text-lg">
+          Guided by experienced masters and rooted in authentic scriptures,
+          every practice preserves the purity of traditional yoga and meditation.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 md:gap-12">
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 flex items-center justify-center rounded-full bg-orange-100 text-orange-500 flex-shrink-0">
+              ✓
+            </div>
+            <p class="text-slate-800 font-semibold text-sm md:text-base">Traditional Lineage</p>
+          </div>
+          <div class="flex items-center gap-3">
+            <div class="h-8 w-8 flex items-center justify-center rounded-full bg-orange-100 text-orange-500 flex-shrink-0">
+              ✓
+            </div>
+            <p class="text-slate-800 font-semibold text-sm md:text-base">Modern Approach</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5 - Contact -->
+  <section class="min-h-screen px-4 md:px-10 lg:px-16 py-16 md:py-24 contact-bg">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[3fr_2fr] rounded-xl overflow-hidden shadow-xl">
+      <!-- Left form -->
+      <div class="bg-[#0b1f3a] p-6 md:p-8 lg:p-12 text-white">
+        <h1 class="text-2xl md:text-3xl lg:text-3xl font-semibold mb-6 md:mb-8">
+          Start Your Journey Today
+        </h1>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4 md:mb-6">
+          <div>
+            <label class="text-sm text-slate-300 block mb-1">FULL NAME</label>
+            <input type="text" placeholder="Enter name"
+            class="w-full p-3 rounded-lg bg-white/10 border border-white/20 outline-none focus:border-amber-300 text-white placeholder-slate-400">
+          </div>
+          <div>
+            <label class="text-sm text-slate-300 block mb-1">Email</label>
+            <input type="email" placeholder="Enter Your Mail"
+            class="w-full p-3 rounded-lg bg-white/10 border border-white/20 outline-none focus:border-amber-300 text-white placeholder-slate-400">
+          </div>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-sm text-slate-300 block mb-1">INTEREST</label>
+          <select class="w-full p-3 rounded-lg bg-white/10 text-white border border-white/20 outline-none focus:border-amber-300 appearance-none">
+            <option class="bg-slate-800 text-white">Yoga Classes</option>
+            <option class="bg-slate-800 text-white">Meditation</option>
+            <option class="bg-slate-800 text-white">Ayurveda</option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label class="text-sm text-slate-300 block mb-1">Message</label>
+          <textarea rows="4" class="w-full p-3 rounded-lg bg-white/10 border border-white/20 outline-none focus:border-amber-300 text-white resize-vertical"></textarea>
+        </div>
+
+        <button class="w-full bg-[#ef9e41] hover:opacity-90 transition p-3 md:py-2 rounded-xl font-medium">
+          SEND MESSAGE
+        </button>
+      </div>
+      
+      <!-- Right contact info -->
+      <div class="bg-[#ef9e41] p-6 md:p-8 lg:p-12 text-white">
+        <h1 class="text-2xl md:text-3xl font-semibold mb-8 md:mb-10">
+          Connect With Us
+        </h1>
+        <div class="space-y-6 md:space-y-8">
+          <div class="flex gap-4 items-start md:items-center">
+            <i class="fa-solid fa-location-dot text-2xl flex-shrink-0 mt-1"></i>
+            <div>
+              <p class="font-semibold text-xl md:text-2xl">Vedic Shala</p>
+              <p class="text-sm opacity-90 leading-relaxed">
+                Ganga Path, Rishikesh<br>
+                Uttarakhand, India
+              </p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start md:items-center">
+            <i class="fa-solid fa-phone text-xl flex-shrink-0 mt-1 md:mt-0"></i>
+            <div>
+              <p class="font-semibold text-xl md:text-2xl">Phone</p>
+              <p class="text-sm opacity-90">+91 9878 568 255</p>
+            </div>
+          </div>
+
+          <div class="flex gap-4 items-start md:items-center">
+            <i class="fa-solid fa-envelope text-xl flex-shrink-0 mt-1 md:mt-0"></i>
+            <div>
+              <p class="font-semibold text-xl md:text-2xl">Email</p>
+              <p class="text-sm opacity-90">ouruniversity23256.ac.in</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 md:mt-10 pt-6 md:pt-8 border-t border-orange-200">
+          <p class="text-sm mb-4 opacity-90">FOLLOW OUR STORY</p>
+          <div class="flex gap-3 md:gap-4">
+            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full cursor-pointer hover:scale-105 transition">
+              <i class="fa-solid fa-share-nodes text-black text-lg"></i>
+            </div>
+            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full cursor-pointer hover:scale-105 transition">
+              <i class="fa-brands fa-dribbble text-black text-lg"></i>
+            </div>
+            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-full cursor-pointer hover:scale-105 transition">
+              <i class="fa-brands fa-linkedin text-black text-lg"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer Section -->
+<footer class="bg-gradient-to-r from-[#0b1f3a] via-[#1e3a8a] to-[#0f766e] pt-16 pb-8 px-4 md:px-10 lg:px-20 relative overflow-hidden">
+  
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_80%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+    <div class="absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_80%_20%,rgba(255,140,66,0.2),transparent_50%)]"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto relative z-10">
+    
+    <!-- Top Footer Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
+      
+      <!-- Brand Section -->
+      <div class="lg:col-span-1">
+        <div class="flex items-center gap-3 mb-6">
+          <div class="w-12 h-12 bg-[#ff8c42] rounded-2xl flex items-center justify-center shadow-lg">
+            <i class="fas fa-om text-white text-xl"></i>
+          </div>
+          <div>
+            <h3 class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent">
+              AMAL TECH
+            </h3>
+            <p class="text-xs text-slate-400 uppercase tracking-wider font-medium">Ancient Wisdom</p>
+          </div>
+        </div>
+        <p class="text-slate-300 leading-relaxed text-sm md:text-base mb-6">
+          Rooted in 5000+ years of Vedic tradition, we bring authentic Yoga, Meditation, and Ayurvedic wisdom to modern lives.
+        </p>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+            <i class="fab fa-facebook-f text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+            <i class="fab fa-instagram text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+            <i class="fab fa-youtube text-sm"></i>
+          </a>
+          <a href="#" class="w-10 h-10 bg-white/20 hover:bg-white/30 backdrop-blur-sm rounded-xl flex items-center justify-center text-white transition-all duration-300 hover:scale-110">
+            <i class="fab fa-linkedin-in text-sm"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold text-white mb-6 tracking-tight">Quick Links</h4>
+        <ul class="space-y-3">
+          <li><a href="#yoga" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Yoga Programs</a></li>
+          <li><a href="#Meditation" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Meditation</a></li>
+          <li><a href="#culture" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Vedic Culture</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Workshops</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Teacher Training</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold text-white mb-6 tracking-tight">Our Services</h4>
+        <ul class="space-y-3">
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Hatha Yoga</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Vinyasa Flow</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Ayurveda</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Pranayama</a></li>
+          <li><a href="#" class="text-slate-300 hover:text-[#ff8c42] hover:underline underline-offset-4 transition text-sm md:text-base block pb-1">Philosophy</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Info -->
+      <div>
+        <h4 class="text-lg md:text-xl font-semibold text-white mb-6 tracking-tight">Connect With Us</h4>
+        <div class="space-y-4">
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#ff8c42]/20 rounded-xl flex items-center justify-center flex-shrink-0 mt-1">
+              <i class="fas fa-map-marker-alt text-[#ff8c42] text-lg"></i>
+            </div>
+            <div>
+              <p class="text-sm md:text-base text-slate-300">Vedic Shala, Ganga Path</p>
+              <p class="text-xs text-slate-400">Rishikesh, Uttarakhand</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#ff8c42]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-phone text-[#ff8c42] text-lg"></i>
+            </div>
+            <div>
+              <p class="text-sm md:text-base text-slate-300 font-medium">+91 9878 568 255</p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-10 h-10 bg-[#ff8c42]/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <i class="fas fa-envelope text-[#ff8c42] text-lg"></i>
+            </div>
+            <div>
+              <p class="text-sm md:text-base text-slate-300">hello@amaltech.in</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="border-t border-white/10 pt-8 md:pt-12">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 md:gap-0 text-center md:text-left">
+        
+        <!-- Newsletter -->
+        <div class="flex flex-col sm:flex-row items-center gap-3 mb-6 md:mb-0 md:w-1/2">
+          <div class="flex items-center gap-2 text-slate-300 text-sm md:text-base">
+            <i class="fas fa-feather-alt text-[#ff8c42]"></i>
+            <span>Subscribe to Vedic Insights</span>
+          </div>
+          <div class="flex w-full md:w-auto">
+            <input type="email" placeholder="Enter your email"
+              class="flex-1 md:flex-none bg-white/10 backdrop-blur-sm border border-white/20 rounded-l-xl md:rounded-l-lg px-4 py-3 text-white placeholder-slate-400 text-sm focus:outline-none focus:border-[#ff8c42] w-full md:w-64">
+            <button class="bg-[#ff8c42] hover:bg-[#ef8c42] text-white px-6 py-3 rounded-r-xl md:rounded-r-lg font-medium text-sm whitespace-nowrap">
+              Subscribe
+            </button>
+          </div>
+        </div>
+
+        <!-- Copyright & Policies -->
+        <div class="flex flex-col sm:flex-row items-center gap-6 text-sm text-slate-300">
+          <div class="flex items-center gap-1">
+            <i class="fas fa-copyright text-[#ff8c42]"></i>
+            <span>2026 Amal Tech. All rights reserved.</span>
+          </div>
+          <div class="flex gap-6">
+            <a href="#" class="hover:text-[#ff8c42] transition text-xs md:text-sm">Privacy Policy</a>
+            <a href="#" class="hover:text-[#ff8c42] transition text-xs md:text-sm">Terms of Service</a>
+            <a href="#" class="hover:text-[#ff8c42] transition text-xs md:text-sm">Disclaimer</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</footer>
+</body>
+</html>
